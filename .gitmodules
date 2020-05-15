@@ -1,0 +1,15 @@
+[submodule "conll-rdf"]
+	path = conll-rdf
+	url = https://github.com/acoli-repo/conll-rdf.git
+[submodule "cqp4rdf"]
+	path = cqp4rdf
+	url = https://github.com/acoli-repo/cqp4rdf.git
+[submodule "xml2conll"]
+	path = xml2conll
+	url = https://github.com/acoli-repo/xml2conll.git
+[submodule "conll-merge"]
+	path = conll-merge
+	url = https://github.com/acoli-repo/conll-merge.git
+[submodule "conll-transform"]
+	path = conll-transform
+	url = https://github.com/acoli-repo/conll-transform.git
