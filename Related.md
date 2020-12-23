@@ -6,6 +6,7 @@
 
 - [Terminal-based CoNLL-file viewer](https://lindat.mff.cuni.cz/repository/xmlui/handle/11234/1-2514) (last version 2017, probably CoNLL-U only)
 - [CoNLL-U editor](https://github.com/Orange-OpenSource/conllueditor) (CoNLL-U only)
+- [CoNLL-X utils](https://github.com/danieldk/conllx-utils) (CoNLL-X only, incl. viewer; note that their "merge" means to append rows, not to append colums as in CoNLL-Merge)  
 
 ## Parsing of CoNLL/TSV data into RDF
 
