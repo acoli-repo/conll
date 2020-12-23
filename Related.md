@@ -16,3 +16,4 @@
 ## Conversion of CoNLL/TSV data for different libraries
 
 - [Python parser for CoNLL-U](https://github.com/EmilStenstrom/conllu), parse CoNLL-U strings into nested Python dictionaries, not streamable
+- [pyconll](https://github.com/pyconll/pyconll) (CoNLL-U only)
