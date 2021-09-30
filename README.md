@@ -39,9 +39,14 @@ Note that the alignment is sufficiently robust to be applied off-the-shelf in th
 
 CoNLL-RDF (`conll-rdf/`): Given a CoNLL file, break it into sentences and expose every sentence (and, optionally, its context) as an RDF graph. Manipulate it with SPARQL, e.g., enrich it with links to an external knowledge base. Serialize back into a CoNLL format, an RDF representation or other corpus formats.
 
-In combination with CoNLL-Merge (see below), this allows complex transformations of linguistic annotations, e.g., to derive 
+In combination with CoNLL-Merge, this allows complex tasks of transforming and enriching existing annotations, either in language resources or dynamically as a part of NLP workflows.
 
-We see the primary use of CoNLL-RDF in aggregating and transforming the output of NLP tools and in complex aggregation tasks over heterogeneous input annotations, e.g., syntax and semantics. Sample applications:
+We see primary uses of CoNLL-RDF in 
+- the transformation of the output of NLP tools (shallow/fast transformation with direct replacement operations), 
+- the enrichment of existing annotations (on-the-fly information integration, e.g., by linking/comparison with an external knowledge graph), but also 
+- in complex aggregation tasks for the creation of gold data to train NLP tools on (annotation engineering, with up to hundreds of update operations).
+
+Sample applications include, but are not limited to:
 
 - Given corpus data in one CoNLL format, convert it into another CoNLL format (see [CoNLL-Transform](https://github.com/acoli-repo/conll-transform))
 - Given the output of one NLP tool, convert it for consumption of another NLP tool (see our [Flexible Integrated Transformation and Annotation Engineering platform [FINTAN]](https://github.com/Pret-a-LLOD/Fintan) and the NLP workflow management system [Teanga](https://github.com/Pret-a-LLOD/teanga))
