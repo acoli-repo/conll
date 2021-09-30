@@ -6,7 +6,7 @@ The ACoLi CoNLL libraries are an aggregator repository for several tools for pro
 
   * [What it does](#what-it-does)
     + [Parsing CoNLL annotations into graphs and back](#parsing-conll-annotations-into-graphs-and-back---conll-rdf---)
-    + [Merging concurrent annotations](#merging-concurrent-annotations---conll-merge---)
+    + [Merging and retokenizing annotations](#merging-and-retokenizing-annotations---conll-merge---)
     + [Visualizing and querying CoNLL annotations as graphs](#visualizing-and-querying-conll-annotations-as-graphs---cqp4rdf---)
     + [Other tools](#other-tools)
   * [Setting it up](#setting-it-up)
@@ -31,7 +31,7 @@ We see the primary use of CoNLL-RDF in aggregating and transforming the output o
 
 Special features missing from generic TSV/CSV parsers is that we support extensions of the CoNLL data model to account for syntactic dependencies (as object properties), chunk annotations (IOBES/BIO schemata), trees (phrase structure syntax), XML markup (e.g., for text structure annotation), and special extensions for semantic role labelling (one additional column per predicate per sentence).
 
-### Merging concurrent annotations (`conll-merge/`)
+### Merging and retokenizing annotations (`conll-merge/`)
 
 Given two or more annotations of the same text, say, `abc.conll` with 10 columns and `xyz.conll` with 5 columns, align and concatenate them such that for every word from `abc.conll`, the corresponding row first has the original annotation from `abc.conll`, followed by the annotations from `xyz.conll`, i.e., 14 columns in total (the `WORD` column from `xyz.conll` that is used for alignment is suppressed by default). 
 
