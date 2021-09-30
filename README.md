@@ -2,6 +2,16 @@
 
 The ACoLi CoNLL libraries are an aggregator repository for several tools for processing, manipulating and transforming TSV formats developed at the Applied Computational Linguistics Lab at Goethe University Frankfurt, Germany.
 
+## Table of Contents
+
+  * [What it does](#what-it-does)
+    + [Parsing CoNLL annotations into graphs and back](#parsing-conll-annotations-into-graphs-and-back---conll-rdf---)
+    + [Merging concurrent annotations](#merging-concurrent-annotations---conll-merge---)
+    + [Visualizing and querying CoNLL annotations as graphs](#visualizing-and-querying-conll-annotations-as-graphs---cqp4rdf---)
+    + [Other tools](#other-tools)
+  * [Setting it up](#setting-it-up)
+  * [Acknowledgements](#acknowledgements)
+
 ## What it does
 
 ### Parsing CoNLL annotations into graphs and back (`conll-rdf/`)
@@ -28,6 +38,7 @@ Given two or more annotations of the same text, say, `abc.conll` with 10 columns
 If the files cannot be aligned, the user can chose from different conflict resolution strategies. By default, CoNLL-Merge will put unaligned words into separate rows and fill up the columns with the placeholder symbol `?` to indicate alignment errors. Alternatively, the user can chose to enforce the tokenization of the first file onto the second, to split tokens from all files into their smallest common elements, to use minimal edit distance to find the most likely alignment, or any combination of these strategies.
 
 Note that the alignment is sufficiently robust to be applied off-the-shelf in the following non-standard constellations:
+- retokenize a previously annotated text (e.g., undo the tokenization of an annotation tool)
 - the same text has been processed by different NLP tools that did some alternations to the primary data (e.g., escape certain symbols)
 - the same text is used, but using different encodings (e.g., XML entities vs. UTF-8 characters)
 - the same text is used, but tokenized according to different principles, e.g., one version with whitespace tokenization (`don't` `go`), one with Penn-style tokenization (`do` `n't` `go`)
