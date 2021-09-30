@@ -1,6 +1,13 @@
 # Related external tools
 
-(under construction)
+The ACoLi CoNLL Libraries provide means of merging, transformation and querying of CoNLL and other TSV data.
+
+Special features are:
+- support for CoNLL-specific extensions of the conventional TSV/CSV format
+- applicable to any CoNLL dialect
+- out-of-the-box parsing of CoNLL into RDF graphs 
+
+However, more specialized tools for individual dialects or purposes may be preferred at times. Below, you can find an (incomplete) list.
 
 ## Visualization and editing of CoNLL/TSV data
 
