@@ -10,6 +10,7 @@ The ACoLi CoNLL libraries are an aggregator repository for several tools for pro
     + [Visualizing and querying CoNLL annotations as graphs](#visualizing-and-querying-conll-annotations-as-graphs---cqp4rdf---)
     + [Other tools](#other-tools)
   * [Setting it up](#setting-it-up)
+  * [Related tools](#related-tools)
   * [Acknowledgements](#acknowledgements)
 
 ## What it does
@@ -68,9 +69,13 @@ For updating an existing installation in the directory `./conll/`, run
   
 Note that these repositories do not have strong interdependencies in the aggregator, but that this has been mostly created to faciliate a quick-and-easy local setup of all components of the ACoLi CoNLL Libraries. For development, we recommend to work within the submodule repositories directly.
 
+## Related tools
+
+Please see [Related.md](./Related.md) for an overview over related tools.
+
 ## Acknowledgements
 
-If you use the ACoLi CoNLL Libraries, please consider to refer to our reference publication:
+If you use the ACoLi CoNLL Libraries, please refer to our reference publication:
 
 * Chiarcos, C. & Schenk, N. (2018), [The ACoLi CoNLL Libraries: Beyond Tab-Separated Values](http://www.lrec-conf.org/proceedings/lrec2018/pdf/869.pdf), In: Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC 2018), Miyazaki, Japan, May 7-12, 2018, p.571-576.
 
