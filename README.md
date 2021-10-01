@@ -7,6 +7,7 @@ In particular, the ACoLi CoNLL Libraries provide means of *merging*, *transforma
 Special features are:
 - support for CoNLL-specific extensions of the conventional TSV/CSV format
 - applicable to any CoNLL dialect
+- machine-readable [specification](https://raw.githubusercontent.com/acoli-repo/conll-rdf/master/owl/conll.ttl) and [conversion](https://github.com/acoli-repo/conll-transform) between more than 20 CoNLL and other TSV/CSV formats
 - out-of-the-box parsing of CoNLL into RDF graphs 
 
 The ACoLi CoNLL libraries were originally designed for usage within Java and Shell scripts. Python bindings/replication in preparation. Via [Fintan](https://github.com/Pret-a-LLOD/Fintan), CoNLL-RDF workflows are provided as Docker containers.
