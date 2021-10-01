@@ -1,13 +1,15 @@
 # ACoLi CoNLL libraries
 
-The ACoLi CoNLL libraries are an aggregator repository for several tools for processing, manipulating and transforming TSV formats developed at the Applied Computational Linguistics Lab at Goethe University Frankfurt, Germany.
+The ACoLi CoNLL Libraries are an aggregator repository for several tools for processing, manipulating and transforming TSV formats developed at the Applied Computational Linguistics Lab at Goethe University Frankfurt, Germany.
 
-In particular, the ACoLi CoNLL Libraries provide means of merging, transformation and querying of CoNLL and other TSV (CSV) data.
+In particular, the ACoLi CoNLL Libraries provide means of *merging*, *transformation* and *querying* of CoNLL and other TSV (CSV) data.
 
 Special features are:
 - support for CoNLL-specific extensions of the conventional TSV/CSV format
 - applicable to any CoNLL dialect
 - out-of-the-box parsing of CoNLL into RDF graphs 
+
+The ACoLi CoNLL libraries were originally designed for usage within Java and Shell scripts. Python bindings/replication in preparation. Via [Fintan](https://github.com/Pret-a-LLOD/Fintan), CoNLL-RDF workflows are provided as Docker containers.
 
 ## Table of Contents
 
