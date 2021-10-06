@@ -83,8 +83,17 @@ For updating an existing installation in the directory `./conll/`, run
 
     $> cd ./conll/
     $> git submodule update --recursive .
-  
+
 Note that these repositories do not have strong interdependencies in the aggregator, but that this has been mostly created to faciliate a quick-and-easy local setup of all components of the ACoLi CoNLL Libraries. For development, we recommend to work within the submodule repositories directly.
+
+### Updating submodules in the repository
+
+For admins: To update all submodules to their latest version in *this* repository, run
+
+    $> cd ./conll/
+    $> git submodule update --recursive --remote --merge
+    $> git commit -a -m "updating submodules"
+    $> git push
 
 ## Related tools
 
