@@ -8,7 +8,7 @@ Special features are:
 - support for CoNLL-specific extensions of the conventional TSV/CSV format
 - applicable to any CoNLL dialect
 - machine-readable [specification](https://raw.githubusercontent.com/acoli-repo/conll-rdf/master/owl/conll.ttl) and [conversion](https://github.com/acoli-repo/conll-transform) between more than 20 CoNLL and other TSV/CSV formats, including, but not limited to CoNLL-U, CoNLL-X, CoNLL-2012 (OntoNotes), UniMorph, and SketchEngine.
-- out-of-the-box parsing of CoNLL into RDF graphs 
+- out-of-the-box parsing of CoNLL into RDF graphs
 
 The ACoLi CoNLL libraries were originally designed for usage within Java and Shell scripts. Python bindings/replication in preparation. Via [Fintan](https://github.com/Pret-a-LLOD/Fintan), CoNLL-RDF workflows are provided as Docker containers.
 
@@ -27,7 +27,7 @@ The ACoLi CoNLL libraries were originally designed for usage within Java and She
 
 ### Merging and retokenizing annotations
 
-[CoNLL-Merge](https://github.com/acoli-repo/conll-merge) (`conll-merge/`): Given two or more annotations of the same text, say, `abc.conll` with 10 columns and `xyz.conll` with 5 columns, align and concatenate them such that for every word from `abc.conll`, the corresponding row first has the original annotation from `abc.conll`, followed by the annotations from `xyz.conll`, i.e., 14 columns in total (the `WORD` column from `xyz.conll` that is used for alignment is suppressed by default). 
+[CoNLL-Merge](https://github.com/acoli-repo/conll-merge) (`conll-merge/`): Given two or more annotations of the same text, say, `abc.conll` with 10 columns and `xyz.conll` with 5 columns, align and concatenate them such that for every word from `abc.conll`, the corresponding row first has the original annotation from `abc.conll`, followed by the annotations from `xyz.conll`, i.e., 14 columns in total (the `WORD` column from `xyz.conll` that is used for alignment is suppressed by default).
 
 If the files cannot be aligned, the user can chose from different conflict resolution strategies. By default, CoNLL-Merge will put unaligned words into separate rows and fill up the columns with the placeholder symbol `?` to indicate alignment errors. Alternatively, the user can chose to enforce the tokenization of the first file onto the second, to split tokens from all files into their smallest common elements, to use minimal edit distance to find the most likely alignment, or any combination of these strategies.
 
@@ -44,9 +44,9 @@ Note that the alignment is sufficiently robust to be applied off-the-shelf in th
 
 In combination with CoNLL-Merge, this allows complex tasks of transforming and enriching existing annotations, either in language resources or dynamically as a part of NLP workflows.
 
-We see primary uses of CoNLL-RDF in 
-- the transformation of the output of NLP tools (shallow/fast transformation with direct replacement operations), 
-- the enrichment of existing annotations (on-the-fly information integration, e.g., by linking/comparison with an external knowledge graph), but also 
+We see primary uses of CoNLL-RDF in
+- the transformation of the output of NLP tools (shallow/fast transformation with direct replacement operations),
+- the enrichment of existing annotations (on-the-fly information integration, e.g., by linking/comparison with an external knowledge graph), but also
 - in complex aggregation tasks for the creation of gold data to train NLP tools on (annotation engineering, with up to hundreds of update operations).
 
 Sample applications include, but are not limited to:
@@ -64,7 +64,7 @@ Special features missing from generic TSV/CSV parsers is that we support extensi
 
 There are plenty of CoNLL visualizers around, however, most of these are limited to a specific CoNLL dialect, e.g., CoNLL-U, and operate either memory-based (Brat) or against a relational backend (CWB). A downside of these that they are hard to adapt for changes in the data model, e.g., the introduction of another annotation layer. As an alternative, we allow to operate against an RDF triple/quad store as a backend.
 
-[CQP4RDF](https://github.com/acoli-repo/cqp4rdf) (`cqp4rdf/`): Visualizing and querying CoNLL annotations *as graphs*. 
+[CQP4RDF](https://github.com/acoli-repo/cqp4rdf) (`cqp4rdf/`): Visualizing and querying CoNLL annotations *as graphs*.
 
 As the use of RDF technology is still somewhat uncharted territory for corpus linguists, we support a classical corpus query language, CQP, for querying the backend. However, it is possible to perform queries beyond the expressivity of CQP by extending CQP statements with SPARQL fragments.
 
@@ -94,6 +94,19 @@ For admins: To update all submodules to their latest version in *this* repositor
     $> git submodule update --recursive --remote --merge
     $> git commit -a -m "updating submodules"
     $> git push
+
+For committing changes in a submodule, say `./conll-transform`, make sure the submodule is on the correct branch and not in a detached head.
+
+    $> cd ./conll-transform
+    $> git checkout master
+
+After doing local changes in `./conll-transform`, push them
+
+    $> cd ./conll-transform # unless you're in there anyway
+    $> git commit -a -m "PLEASE DESCRIBE WHAT YOU DID"
+    $> git push
+
+See [here](https://gist.github.com/mrnabati/bc59304784e1a3a48dd25f92bf20a420#file-gitsolutions-md) for more hints. 
 
 ## Related tools
 
