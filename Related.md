@@ -28,3 +28,4 @@ However, more specialized tools for individual dialects or purposes may be prefe
 - [colonel](https://github.com/nlpodyssey/colonel): Python, CoNLL-U only
 - [conllx (Rust)](https://docs.rs/conllx/0.12.1/conllx/): Rust parser, CoNLL-X only
 - [R parser](https://rdrr.io/cran/NLP/man/CoNLLTextDocument.html): R parser, customizable; apparently restricted to fixed-width formats, i.e., no SRL annotation
+- [CONLL-U to Pandas DataFrame](https://github.com/interrogator/conll-df): Python, CoNLL-U only
